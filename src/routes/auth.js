@@ -22,7 +22,11 @@ router.post("/invite", async (req, res) => {
     }
     await user.save();
 
-    const magicLink = `${process.env.BASE_URL}/auth/verify?token=${token}`;
+    // fixzrapp://invite?token=abc&role=employee
+
+    // const magicLink = `${process.env.BASE_URL}/auth/verify?token=${token}`;
+    const magicLink = `fixzrapp://auth/verify?token=${token}`;
+
 
     // Instead of sending email, return JSON response
     res.json({ message: "Magic link generated", magicLink });
