@@ -2,6 +2,7 @@
   "name": "magic-link-poc",
   "version": "1.0.0",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js"
   },

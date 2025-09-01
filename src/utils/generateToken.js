@@ -1,7 +1,7 @@
-const crypto = require("crypto");
+import crypto from "crypto";
 
 const generateToken = () => {
   return crypto.randomBytes(20).toString("hex");
 };
 
-module.exports = generateToken;
+export default generateToken;

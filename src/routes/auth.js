@@ -1,6 +1,6 @@
-const express = require("express");
-const User = require("../models/User");
-const generateToken = require("../utils/generateToken");
+import express from "express";
+import User from "../models/User.js"
+import generateToken from "../utils/generateToken.js";
 
 const router = express.Router();
 
@@ -54,4 +54,4 @@ router.get("/verify", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
